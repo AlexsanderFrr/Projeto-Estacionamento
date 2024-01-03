@@ -1,4 +1,4 @@
-﻿using Projeto_Estacionamento.Models;
+﻿using ProjetoEstacionamento.Models;
 
 class Program
 {
@@ -13,7 +13,7 @@ class Program
                           "Por gentileza, digite o preço de entrada: ");
         precoInicial = Convert.ToDecimal(Console.ReadLine());
 
-        Console.WriteLine("Agora digite o preço cobradompor hora: ");
+        Console.WriteLine("Agora digite o preço cobrado por hora: ");
         precoPorHora = Convert.ToDecimal(Console.ReadLine());
 
         Estacionamento estacionamentoDoAle = new Estacionamento(precoInicial, precoPorHora);
@@ -25,10 +25,12 @@ class Program
         {
             Console.Clear();
             Console.WriteLine("Digite a sua opção: ");
-            Console.WriteLine("1 - Cadastrar veículo");
+            Console.WriteLine("--------------------");
+            Console.WriteLine("1 - Estacionar veículo");
             Console.WriteLine("2 - Remover veículo");
             Console.WriteLine("3 - Listar veículos");
             Console.WriteLine("4 - Encerrar");
+            Console.WriteLine("--------------------");
 
             switch (Console.ReadLine())
             {
@@ -52,10 +54,8 @@ class Program
                     Console.WriteLine("Opção inválida");
                     break;
             }
-            Console.WriteLine("Pressione uma tecla para continuar");
-            Console.ReadLine();
         }
 
-        Console.WriteLine("O programa se encerrou");
+        Console.WriteLine("O estacionamento está encerrando suas atividades por hoje");
     }
 }
