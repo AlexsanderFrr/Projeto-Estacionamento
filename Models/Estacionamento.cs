@@ -9,7 +9,7 @@ namespace Projeto_Estacionamento.Models
     {
         private decimal precoInicial = 0;
         private decimal precoPorHora = 0;
-        private List<string?> veiculos = new List<string?>();
+        private List<string> veiculos = new List<string>();
 
         public Estacionamento(decimal precoInicial, decimal precoPorHora)
         {
@@ -21,13 +21,29 @@ namespace Projeto_Estacionamento.Models
         {
             Console.WriteLine("Digite a placa do veículo para estacionar: ");
             string placa = Console.ReadLine();
-            veiculos.Add(placa);
+            
+            if (!string.IsNullOrEmpty(placa))  
+            {
+                veiculos.Add(placa);
+                Console.WriteLine($"Veículo com a placa {placa} estacionado com sucesso!");
+            }
+            else
+            {
+                Console.WriteLine("Placa inválida. Não foi possível estacionar o veículo.");
+            }
              
         }
 
         public void RemoverVeiculo()
         {
+            Console.WriteLine("Digite a placa do veículo para remover o carro do estacionamento: ");
+            string placa = Console.ReadLine();
 
+            if (veiculos.Contains(placa))
+            {
+                veiculos.Remove(placa);
+                Console.WriteLine($"Veículo com a placa {placa} foi removido");
+            }
         }
 
         public void ListarVeiculo()
