@@ -51,3 +51,12 @@ Por último, foi feito um menu interativo com as seguintes ações implementadas
 - **Método `Main`:** Adicionado método principal para iniciar a execução do programa.
 - **Exceções:** Adicionadas verificações para não aceitar valores nulos ou negativos nos preços e horas estacionadas, proporcionando maior robustez ao sistema.
 
+## Como Executar
+O código pode ser executado em um ambiente .NET, utilizando um ambiente de desenvolvimento integrado (IDE) como Visual Studio ou através do terminal. Certifique-se de ter o ambiente .NET instalado em sua máquina.
+
+
+
+```bash
+dotnet run
+```
+Projeto desenvolvido como parte da trilha .NET da Digital Innovation One (DIO).
